@@ -169,7 +169,22 @@ if(CMAKE_SYSTEM_NAME STREQUAL Linux)
 			
 	endif()
 	
-	
+	# Dependency to XCB
+	find_package(XCB)
+	if(XCB_FOUND)
+		target_compile_definitions(Util PRIVATE UTIL_HAVE_LIB_XCB)
+		target_include_directories(Util PRIVATE ${XCB_INCLUDE_DIR})
+		target_link_libraries(Util LINK_PRIVATE ${XCB_LIBRARIES})
+	endif()
+
+	# Dependency to XCB_KEYSYMS
+	find_package(XCB_KEYSYMS)
+	if(XCB_KEYSYMS_FOUND)
+		target_compile_definitions(Util PRIVATE UTIL_HAVE_LIB_XCB_KEYSYMS)
+		target_include_directories(Util PRIVATE ${XCB_KEYSYMS_INCLUDE_DIR})
+		target_link_libraries(Util LINK_PRIVATE ${XCB_KEYSYMS_LIBRARIES})
+	endif()
+
 	# Dependency to EGL
 	find_package(EGL)
 	if(EGL_FOUND)
@@ -282,6 +297,14 @@ set_package_properties(SQLite3 PROPERTIES
 set_package_properties(X11 PROPERTIES
 	TYPE OPTIONAL
 	PURPOSE "Creation of a window for platforms using X11."
+)
+set_package_properties(XCB PROPERTIES
+	TYPE OPTIONAL
+	PURPOSE "Creation of a window for platforms using xcb."
+)
+set_package_properties(XCB_KEYSYMS PROPERTIES
+	TYPE OPTIONAL
+	PURPOSE "Processing of keyboard input events when using xcb."
 )
 set_package_properties(ZLIB PROPERTIES
 	TYPE OPTIONAL
