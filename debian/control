@@ -10,11 +10,21 @@ Package: libutil-dev
 Section: libdevel
 Architecture: any
 Depends: libutil0 (= ${binary:Version}), ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Various utility classes - development files
+ Library containing various utility classes.
+ .
+ The Util library has been developed and used mainly in the context 
+ of PADrend.
+ .
+ This package contains development files.
 
 Package: libutil0
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Various utility classes - shared library
+ Library containing various utility classes.
+ .
+ The Util library has been developed and used mainly in the context 
+ of PADrend.
+ .
+ This package contains the Util runtime library.
