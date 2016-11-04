@@ -4,18 +4,16 @@ Maintainer: Benjamin Eikel <debian@eikel.org>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.8
 Section: libs
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: https://anonscm.debian.org/collab-maint/libutil.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/libutil.git
+Homepage: https://github.com/PADrend/Util
 
 Package: libutil-dev
 Section: libdevel
 Architecture: any
-Depends: libutilBROKEN (= ${binary:Version}), ${misc:Depends}
+Depends: libutil0 (= ${binary:Version}), ${misc:Depends}
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
-Package: libutilBROKEN
+Package: libutil0
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: <insert up to 60 chars description>
