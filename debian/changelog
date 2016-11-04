@@ -1,5 +1,5 @@
 libutil (0.2.0-1) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release (Closes: #nnnn)
 
  -- Benjamin Eikel <debian@eikel.org>  Fri, 04 Nov 2016 16:34:07 +0100
