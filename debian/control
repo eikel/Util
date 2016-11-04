@@ -1,7 +1,19 @@
 Source: libutil
 Priority: optional
 Maintainer: Benjamin Eikel <debian@eikel.org>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9),
+               cmake,
+               libcppunit-dev,
+               libsqlite3-dev,
+               zlib1g-dev,
+               libpng-dev,
+               libarchive-dev,
+               libzip-dev,
+               libxml2-dev,
+               libcurl4-openssl-dev | libcurl-dev,
+               libfreetype6-dev,
+               libsdl2-dev,
+               libsdl2-image-dev
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://github.com/PADrend/Util
